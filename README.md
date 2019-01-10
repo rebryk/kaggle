@@ -1,0 +1,4 @@
+# Kaggle
+
+## License
+[MIT](LICENSE)
