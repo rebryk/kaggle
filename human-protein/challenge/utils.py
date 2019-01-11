@@ -61,7 +61,8 @@ def eval_ensemble(models: List[torch.nn.Module],
         y_pred_, y_true = eval(models[i], loader, loader_aug, n_aug, device)
         y_pred.append(y_pred_)
 
-    return np.concatenate(y_pred, axis=-1), y_true
+    y_pred = np.concatenate(y_pred, axis=-1) if n_aug > 0 else np.stack(y_pred, axis=-1)
+    return y_pred, y_true
 
 
 def find_threshold(y_true: np.ndarray, y_pred: np.ndarray, step: float = 0.1) -> float:

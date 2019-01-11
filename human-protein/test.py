@@ -29,7 +29,7 @@ def evaluate(models: List[torch.nn.Module], loaders: AttrDict):
                                                      loaders.train_aug,
                                                      n_aug=config.n_aug_train,
                                                      device=device)
-    y_pred_train = np.mean(y_pred_train, axis=-1) if config.n_aug_train > 0 else y_pred_train
+    y_pred_train = np.mean(y_pred_train, axis=-1) if config.n_aug_train > 0 or config.k_fold > 1 else y_pred_train
     y_pred_train = utils.sigmoid(y_pred_train)
 
     logger.info('Evaluating valid...')
@@ -38,7 +38,8 @@ def evaluate(models: List[torch.nn.Module], loaders: AttrDict):
                                                      loaders.valid_aug,
                                                      n_aug=config.n_aug_test,
                                                      device=device)
-    y_pred_valid = utils.sigmoid(np.mean(y_pred_valid, axis=-1))
+    y_pred_valid = np.mean(y_pred_valid, axis=-1) if config.n_aug_test > 0 or config.k_fold > 1 else y_pred_valid
+    y_pred_valid = utils.sigmoid(y_pred_valid)
 
     logger.info('Evaluating test...')
     y_pred_test, y_true_test = utils.eval_ensemble(models,
@@ -46,7 +47,8 @@ def evaluate(models: List[torch.nn.Module], loaders: AttrDict):
                                                    loaders.test_aug,
                                                    n_aug=config.n_aug_test,
                                                    device=device)
-    y_pred_test = utils.sigmoid(np.mean(y_pred_test, axis=-1))
+    y_pred_test = np.mean(y_pred_test, axis=-1) if config.n_aug_test > 0 or config.k_fold > 1 else y_pred_test
+    y_pred_test = utils.sigmoid(y_pred_test)
 
     for threshold in [0.5, 0.3, 0.2]:
         logger.info(f'Threshold: {threshold:.2f}')
