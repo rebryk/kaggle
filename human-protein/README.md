@@ -1,7 +1,7 @@
 # [Human Protein Atlas Image Classification](https://www.kaggle.com/c/human-protein-atlas-image-classification)
 ![Public LB](https://img.shields.io/badge/public%20LB-0.595-orange.svg)
 ![Private LB](https://img.shields.io/badge/private%20LB-0.523-orange.svg)
-![Place](https://img.shields.io/badge/place-94-blue.svg)
+![Place](https://img.shields.io/badge/place-92-blue.svg)
 ![Silver medal](https://img.shields.io/badge/medal-silver-c0c0c0.svg)
 <!--- ![Bronze medal](https://img.shields.io/badge/medal-bronze-cd7f32.svg) -->
 <!--- ![Gold medal](https://img.shields.io/badge/medal-gold-ffd700.svg) -->
