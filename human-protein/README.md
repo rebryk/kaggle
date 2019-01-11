@@ -47,8 +47,8 @@ Stage 2:
 
 #### Result
 - Training takes `~35` hours on Tesla v100
-- Public LB: `0.594`
-- Private LB: TODO
+- Public LB: `0.595`
+- Private LB: `0.523`
 
 ## Observations
 - Mixed precision works poorly
