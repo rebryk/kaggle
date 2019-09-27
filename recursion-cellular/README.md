@@ -26,7 +26,7 @@
 - Image size: `512`
 - Batch size: `64`
 - Epochs: `75`
-- Finetuning for each cell types
+- Finetuning for each cell type
 - Mixed precision
 
 #### Prediciton
