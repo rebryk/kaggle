@@ -18,7 +18,7 @@
 - Head: 2 linear layers with batch normalization
 
 #### Loss
-- Binary Cross Entropy Loss
+- Cross Entropy Loss
 
 #### Training
 - Optimizer: Adam
