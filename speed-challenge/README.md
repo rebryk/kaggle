@@ -59,8 +59,8 @@ One can also use the model to detect lanes to remove all other objects from the 
 ## Installation
 ```
 # Clone the repository
-git clone https://github.com/rebryk/_kaggle.git
-cd _kaggle/speed-challenge
+git clone https://github.com/rebryk/kaggle.git
+cd kaggle/speed-challenge
 
 # Install requirements
 pip install -r requirements.txt
