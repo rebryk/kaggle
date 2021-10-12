@@ -12,7 +12,7 @@ matplotlib==3.0.2
 munch==2.3.2
 networkx==2.2
 numpy==1.15.4
-opencv-python==4.0.0.21
+opencv-python==4.1.1.26
 pandas==0.23.4
 Pillow==6.2.0
 pretrainedmodels==0.7.4
