@@ -2,7 +2,7 @@ albumentations==0.1.10
 attrdict==2.0.0
 cloudpickle==0.6.1
 cycler==0.10.0
-dask==1.0.0
+dask==2021.10.0
 decorator==4.3.0
 imageio==2.4.1
 imgaug==0.2.7
