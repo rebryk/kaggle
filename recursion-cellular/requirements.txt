@@ -1,7 +1,7 @@
 albumentations==0.3.0
 future==0.17.1
 matplotlib==3.0.2
-numpy==1.14.5
+numpy==1.22.0
 opencv-python==4.1.0.25
 opencv-python-headless==4.1.0.25
 pandas==0.24.0
